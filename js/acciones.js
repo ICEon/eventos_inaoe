@@ -3,14 +3,8 @@
 // JavaScript Document
 $(document).ready(function(e) {	
 document.addEventListener("deviceready",function() {
-	$('#btneventos').on ('tap', function(){
-	  buscareventos('junio');
-	  $( "body" ).pagecontainer( "change", "#eventos", { transition: "slide" });
-	})
 	
-});
-
-function buscaeventos(mesb){
+	function buscaeventos(mesb){
 
 	datos = "mes="+mesb;
 	$.ajax({
@@ -33,4 +27,13 @@ $('#devic table td').eq(15).text(Datos['COpcion']);
 */
 	});
 }
+	
+	$('#btneventos').on ('tap', function(){
+	  buscaeventos('junio');
+	  $( "body" ).pagecontainer( "change", "#eventos", { transition: "slide" });
+	})
+	
+});
+
+
 });
