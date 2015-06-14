@@ -4,7 +4,7 @@ function buscaeventos(){
 	
 	$.ajax({
 		
-		url: "http://192.168.1.67/EventosINAOE/buscareventos.php",
+		url: "http://192.168.1.67/EventosINAOE/buscareventos.php"
 	
 		
 	}).done(function(msg) {
