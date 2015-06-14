@@ -1,10 +1,7 @@
 // JavaScript Document
 
 // JavaScript Document
-$(document).ready(function(e) {	
-document.addEventListener("deviceready",function() {
-	
-	function buscaeventos(mesb){
+$(document).ready(function(e) {	function buscaeventos(mesb){
 
 	datos = "mes="+mesb;
 	$.ajax({
@@ -27,6 +24,9 @@ $('#devic table td').eq(15).text(Datos['COpcion']);
 */
 	});
 }
+document.addEventListener("deviceready",function() {
+	
+	
 	
 	$('#btneventos').on ('tap', function(){
 	
