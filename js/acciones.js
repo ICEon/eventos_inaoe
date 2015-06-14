@@ -1,12 +1,12 @@
 // JavaScript Document
-function buscaeventos(mesb){
+function buscaeventos(){
 
-	datos = "mes="+mesb;
+	
 	$.ajax({
-		method: "POST",
+		
 		url: "http://192.168.1.67/EventosINAOE/buscareventos.php",
-		data: datos,
-		datatype: "text"
+	
+		
 	}).done(function(msg) {
 
 alert (msg);
@@ -31,7 +31,8 @@ document.addEventListener("deviceready",function() {
 	
 	$('#btneventos').on ('tap', function(){
 	
-	  buscaeventos('junio');
+	  buscaeventos();
+	  alert ('fuera');
 //	  $( "body" ).pagecontainer( "change", "#eventos", { transition: "slide" });
 	})
 	
