@@ -4,7 +4,7 @@ function buscaeventos(mesb){
 	datos = "mes="+mesb;
 	$.ajax({
 		type: "POST",
-		url: "http://192.168.1.30/EventosINAOE/buscareventos.php",
+		url: "http://192.168.1.67/EventosINAOE/buscareventos.php",
 		data: datos
 	}).done(function(msg) {
 
