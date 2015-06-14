@@ -9,7 +9,7 @@ document.addEventListener("deviceready",function() {
 	datos = "mes="+mesb;
 	$.ajax({
 		type: "POST",
-		url: "127.0.0.1/EventosINAOE/buscareventos.php",
+		url: "http://127.0.0.1/EventosINAOE/buscareventos.php",
 		data: datos
 	}).done(function(msg) {
 
@@ -29,8 +29,9 @@ $('#devic table td').eq(15).text(Datos['COpcion']);
 }
 	
 	$('#btneventos').on ('tap', function(){
+	
 	  buscaeventos('junio');
-	  $( "body" ).pagecontainer( "change", "#eventos", { transition: "slide" });
+//	  $( "body" ).pagecontainer( "change", "#eventos", { transition: "slide" });
 	})
 	
 });
