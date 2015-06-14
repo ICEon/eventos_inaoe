@@ -9,7 +9,7 @@ document.addEventListener("deviceready",function() {
 	datos = "mes="+mesb;
 	$.ajax({
 		type: "POST",
-		url: "http://127.0.0.1/EventosINAOE/buscareventos.php",
+		url: "http://192.168.1.30/EventosINAOE/buscareventos.php",
 		data: datos
 	}).done(function(msg) {
 
