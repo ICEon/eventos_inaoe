@@ -3,9 +3,10 @@ function buscaeventos(mesb){
 
 	datos = "mes="+mesb;
 	$.ajax({
-		type: "POST",
+		method: "POST",
 		url: "http://192.168.1.67/EventosINAOE/buscareventos.php",
-		data: datos
+		data: datos,
+		datatype: "text"
 	}).done(function(msg) {
 
 alert (msg);
