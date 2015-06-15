@@ -9,10 +9,10 @@ function buscaeventos(){
 	
 		
 	}).done(function(msg) {
-
+alert (msg);
 
 var DatosJSON = JSON.parse (msg);
-
+alert (DatosJSON);
 if (DatosJSON.datos == 1)
  {
 $('#listado_eventos').empty();	 
