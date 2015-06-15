@@ -12,11 +12,10 @@ function buscaeventos(){
 	
 		
 	}).done(function(msg) {
-alert (msg);
 
 var DatosJSON = JSON.parse (msg);
-alert (DatosJSON.datos);
-alert(DatosJSON.eventos.length);
+
+
 if (DatosJSON.datos == 1)
  {
 	 var mesactual='';
@@ -70,6 +69,7 @@ document.addEventListener("deviceready",function() {
 	
 	
 	$('.evento').on('tap',function(){
+		alert ("DENTRO");
 		alert ($(this).children("div").attr('id'));
 	});
 });
