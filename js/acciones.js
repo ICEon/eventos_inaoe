@@ -69,7 +69,9 @@ document.addEventListener("deviceready",function() {
 	
 	
 $(document).on('tap', 'div.evento', function() {
-		 $('#nombre-evento').val(($(this).attr('id')));
+	     alert ($(this).find('div').text());
+		 $('#claveevento').text(($(this).attr('id')));
+		 $('nombre-evento').val();
 		 $( "body" ).pagecontainer( "change", "#editar-evento", { transition: "pop" });
 		
 	});
