@@ -2,6 +2,21 @@
 
 var meses = [ "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", 
                "Julio", "Augosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" ];
+			   
+function actualizarevento(clave, nombre)
+{
+
+datos = {clavee:clave , nombree:nombre};
+	$.ajax({
+		method: "POST",
+		url: "http://192.168.1.67/EventosINAOE/actualizaevento.php",
+		data: datos,
+		async: false		
+	}).done(function(msg) {
+		alert (msg);
+	});
+	
+}
 function buscaeventos(){
 
 	
@@ -38,7 +53,7 @@ $('#listado_eventos').empty();
 	   }
 	 }
 	
-	$('#listado_eventos').append('<div align="center" style="margin-top:3px" class="evento" id="'+ DatosJSON.eventos[i].ClaveE +'" ><div style="width:47%; padding:1px; display:inline-block; text-align:left" >'+ DatosJSON.eventos[i].NombreE +'</div><div style="width:15%; padding:1px; display:inline-block; text-align:center">20</div>  <div style="width:22%; padding:1px;  display:inline-block; text-align:center">'+ DatosJSON.eventos[i].FechaE +'</div></div>');
+	$('#listado_eventos').append('<div align="center" style="margin-top:3px" class="evento" id="'+ DatosJSON.eventos[i].ClaveE +'" ><div style="width:47%; padding:1px; display:inline-block; text-align:left" ><span>'+ DatosJSON.eventos[i].NombreE +'</span></div><div style="width:15%; padding:1px; display:inline-block; text-align:center">20</div>  <div style="width:22%; padding:1px;  display:inline-block; text-align:center">'+ DatosJSON.eventos[i].FechaE +'</div></div>');
 
 //'+ DatosJSON.eventos[i].NombreE +'	
 /*
@@ -69,9 +84,9 @@ document.addEventListener("deviceready",function() {
 	
 	
 $(document).on('tap', 'div.evento', function() {
-	     alert ($(this).find('div').text());
+	     alert ($(this).find('span').text());
 		 $('#claveevento').text(($(this).attr('id')));
-		 $('nombre-evento').val();
+		 $('nombre-evento').val($(this).find('span').text());
 		 $( "body" ).pagecontainer( "change", "#editar-evento", { transition: "pop" });
 		
 	});
