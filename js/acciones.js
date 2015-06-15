@@ -70,7 +70,7 @@ document.addEventListener("deviceready",function() {
 	
 $(document).on('tap', 'div.evento', function() {
 		alert ("DENTRO");
-		alert ($(this).attr('class'));
+		alert ($(this).children().first().attr('id'));
 	});
 });
 
