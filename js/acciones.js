@@ -69,8 +69,8 @@ document.addEventListener("deviceready",function() {
 	
 	
 $(document).on('tap', 'div.evento', function() {
-		alert ("DENTRO");
-		alert ($(this + ':first-child').attr('id'));
+
+		alert ($(this).attr('id'));
 	});
 });
 
