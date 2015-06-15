@@ -93,7 +93,7 @@ document.addEventListener("deviceready",function() {
 $('#btnguardare').on('tap',function(){
 actualizarevento($('#claveevento').text(),$('#nombre-evento').val() )	;
 
-	  $( "body" ).pagecontainer( "change", "#eventos", { transition: "flip" });
+	  $( "body" ).pagecontainer( "change", "#menu", { transition: "flip" });
 });
 $(document).on('tap', 'div.evento', function() {
 
