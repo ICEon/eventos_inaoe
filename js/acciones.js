@@ -12,7 +12,8 @@ function buscaeventos(){
 alert (msg);
 
 var DatosJSON = JSON.parse (msg);
-alert (DatosJSON);
+alert (DatosJSON.datos);
+alert(DatosJSON.eventos.length);
 if (DatosJSON.datos == 1)
  {
 $('#listado_eventos').empty();	 
