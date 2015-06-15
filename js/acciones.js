@@ -18,7 +18,7 @@ var DatosJSON = JSON.parse (msg);
 
 if (DatosJSON.datos == 1)
  {
-	 var mesactual='';
+	var mesactual='';
 $('#listado_eventos').empty();	 
 
 	for (var i = 0; i <DatosJSON.eventos.length  ; i++) {
@@ -69,8 +69,9 @@ document.addEventListener("deviceready",function() {
 	
 	
 $(document).on('tap', 'div.evento', function() {
-
-		alert ($(this).attr('id'));
+		 $('#nombre-evento').val(($(this).attr('id')));
+		 $( "body" ).pagecontainer( "change", "#editar-evento", { transition: "pop" });
+		
 	});
 });
 
