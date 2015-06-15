@@ -82,11 +82,15 @@ document.addEventListener("deviceready",function() {
 	  $( "body" ).pagecontainer( "change", "#eventos", { transition: "slide" });
 	})
 	
-	
+
+$('#btnguardare').on('tap',function(){
+actualizarevento($('#claveevento').text(),$('#nombre-evento').val() )	;
+alert ('fuera');
+});
 $(document).on('tap', 'div.evento', function() {
-	     alert ($(this).find('span').text());
+
 		 $('#claveevento').text(($(this).attr('id')));
-		 $('nombre-evento').val($(this).find('span').text());
+		 $('#nombre-evento').val($(this).find('span').text());
 		 $( "body" ).pagecontainer( "change", "#editar-evento", { transition: "pop" });
 		
 	});
