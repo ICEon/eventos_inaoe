@@ -13,7 +13,14 @@ datos = {clavee:clave , nombree:nombre};
 		data: datos,
 		async: false		
 	}).done(function(msg) {
-		alert (msg);
+		if (msg ==1)
+		 {
+alert ('El cambio se realizó');			 
+		 }
+		 else
+		  {
+alert ('error');			  
+		  }
 	});
 	
 }
@@ -78,14 +85,15 @@ document.addEventListener("deviceready",function() {
 	
 	  buscaeventos();
 	  
-//	  $('listado_eventos')
+
 	  $( "body" ).pagecontainer( "change", "#eventos", { transition: "slide" });
 	})
 	
 
 $('#btnguardare').on('tap',function(){
 actualizarevento($('#claveevento').text(),$('#nombre-evento').val() )	;
-alert ('fuera');
+
+	  $( "body" ).pagecontainer( "change", "#eventos", { transition: "flip" });
 });
 $(document).on('tap', 'div.evento', function() {
 
