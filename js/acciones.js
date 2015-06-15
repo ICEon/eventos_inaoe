@@ -28,14 +28,14 @@ $('#listado_eventos').empty();
 	if (i==0)
 	 {
 	  mesactual = fechaevento.getMonth();
-  $('#listado_eventos').append('<div style="width:45%; margin-button:4px; align:center"> <h1>'+ meses[mesactual]+ '</h1> </div> <div style="width:47%; padding:1px; display:inline-block; vertical-align:top;">Nombre del Evento</div><div style="width:15%; padding:1px; display:inline-block; text-align:center;  vertical-align:tap;">Participantes<br> Registrados</div><div style="width:22%; padding:1px;  display:inline-block; text-align:center;  vertical-align:top;">Fecha del evento</div></div>');			 }
+  $('#listado_eventos').append('<div style="width:45%; margin-button:4px; align:center"> <h1>'+ meses[mesactual]+ '</h1> </div> <div style="width:47%; padding:1px; display:inline-block; vertical-align:top;">Nombre del Evento</div><div style="width:15%; padding:1px; display:inline-block; text-align:center;  vertical-align:tap;">Participantes<br> Registrados</div><div style="width:22%; padding:1px;  display:inline-block; text-align:center;  vertical-align:top;">Fecha</div></div>');			 }
 	else
 	 {
 	  if (mesactual != fechaevento.getMonth())
 	   {
 	  mesactual = fechaevento.getMonth();
 
-	  $('#listado_eventos').append('<div style="width:45%; margin-button:4px; align:center"> <h1>'+ meses[mesactual]+ '</h1> </div> <div style="width:47%; padding:1px; display:inline-block; vertical-align:top;">Nombre del Evento</div><div style="width:15%; padding:1px; display:inline-block; text-align:center;  vertical-align:tap;">Participantes<br> Registrados</div><div style="width:22%; padding:1px;  display:inline-block; text-align:center;  vertical-align:top;">Fecha del evento</div></div>');		
+	  $('#listado_eventos').append('<div style="width:45%; margin-button:4px; align:center"> <h1>'+ meses[mesactual]+ '</h1> </div> <div style="width:47%; padding:1px; display:inline-block; vertical-align:top;">Nombre del Evento</div><div style="width:15%; padding:1px; display:inline-block; text-align:center;  vertical-align:tap;">Participantes<br> Registrados</div><div style="width:22%; padding:1px;  display:inline-block; text-align:center;  vertical-align:top;">Fecha</div></div>');		
 	   }
 	 }
 	
