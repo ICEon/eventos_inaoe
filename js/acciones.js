@@ -39,7 +39,7 @@ $('#listado_eventos').empty();
 	   }
 	 }
 	
-	$('#listado_eventos').append('<div align="center" style="margin-top:3px" class="evento"><div style="width:47%; padding:1px; display:inline-block; text-align:left" id="'+ DatosJSON.eventos[i].ClaveE +'">'+ DatosJSON.eventos[i].NombreE +'</div><div style="width:15%; padding:1px; display:inline-block; text-align:center">20</div>  <div style="width:22%; padding:1px;  display:inline-block; text-align:center">'+ DatosJSON.eventos[i].FechaE +'</div></div>');
+	$('#listado_eventos').append('<div align="center" style="margin-top:3px" class="evento" id="'+ DatosJSON.eventos[i].ClaveE +'"><div style="width:47%; padding:1px; display:inline-block; text-align:left" >'+ DatosJSON.eventos[i].NombreE +'</div><div style="width:15%; padding:1px; display:inline-block; text-align:center">20</div>  <div style="width:22%; padding:1px;  display:inline-block; text-align:center">'+ DatosJSON.eventos[i].FechaE +'</div></div>');
 
 //'+ DatosJSON.eventos[i].NombreE +'	
 /*
@@ -69,7 +69,7 @@ document.addEventListener("deviceready",function() {
 	})
 	
 	
-	$('.eventos').on('tap',function(){
+	$('.evento').on('tap',function(){
 		alert ($(this).children("div").attr('id'));
 	});
 });
