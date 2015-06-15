@@ -9,7 +9,7 @@ function actualizarevento(clave, nombre)
 datos = {clavee:clave , nombree:nombre};
 	$.ajax({
 		method: "POST",
-		url: "http://192.168.1.67/EventosINAOE/actualizaevento.php",
+		url: "http://192.168.43.228/EventosINAOE/actualizaevento.php",
 		data: datos,
 		async: false		
 	}).done(function(msg) {
@@ -29,7 +29,7 @@ function buscaeventos(){
 	
 	$.ajax({
 		
-		url: "http://192.168.1.67/EventosINAOE/buscareventos.php",
+		url: "http://192.168.43.228/EventosINAOE/buscareventos.php",
 		async: false
 	
 		
