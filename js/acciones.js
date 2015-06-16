@@ -1,5 +1,5 @@
 // JavaScript Document
-
+$(document).ready(function(e) {	
 var meses = [ "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", 
                "Julio", "Augosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" ];
 			   
@@ -9,7 +9,7 @@ function actualizarevento(clave, nombre)
 datos = {clavee:clave , nombree:nombre};
 	$.ajax({
 		method: "POST",
-		url: "http://192.168.1.10/EventosINAOE/actualizaevento.php",
+		url: "http://192.168.1.81/EventosINAOE/actualizaevento.php",
 		data: datos,
 		async: false		
 	}).done(function(msg) {
@@ -29,7 +29,7 @@ function buscaeventos(){
 	
 	$.ajax({
 		
-		url: "http://192.168.1.10/EventosINAOE/buscareventos.php",
+		url: "http://192.168.1.81/EventosINAOE/buscareventos.php",
 		async: false
 	
 		
@@ -76,18 +76,19 @@ $('#listado_eventos').append('<div style="width:100%; font-size:1em; font-weight
 	});
 }
 // JavaScript Document
-$(document).ready(function(e) {	
-document.addEventListener("deviceready",function() {
+
+//document.addEventListener("deviceready",function() {
 	
 	
 	
-	$('#btneventos').on ('tap', function(){
+	$('#btneventos').on ('click', function(){
+		alert ("here");
 	  buscaeventos();
 	  $( "body" ).pagecontainer( "change", "#eventos", { transition: "slide" });
 	})
 	
 
-$('#btnguardare').on('tap',function(){
+$('#btnguardare').on('click',function(){
 actualizarevento($('#claveevento').text(),$('#nombre-evento').val() )	;
 
 	  $( "body" ).pagecontainer( "change", "#menu", { transition: "flip" });
@@ -102,4 +103,4 @@ $(document).on('tap', 'div.evento', function() {
 });
 
 
-});
+//});
